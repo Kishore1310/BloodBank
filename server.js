@@ -6,6 +6,9 @@ const app = express()
 const bcrypt = require("bcrypt")
 const cors = require("cors")
 const e = require("express")
+
+app.use(express.static("public"));
+
 //create seeeion for users
 app.use(session({
   secret: "secret-key",
