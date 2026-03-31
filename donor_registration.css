@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+}
+
+body {
+  background-color: #f4f6f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 25px;
+  text-transform: capitalize;
+  color: #333;
+}
+.p{
+  display: flex;
+  justify-content: center;
+}
+
+/* Common container style */
+.person_ki,
+.allocating_unit,
+.time,
+.person_ki_location {
+  width: 400px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.person_ki_name,
+.allocating_unit_type label,
+.time label,
+.person_ki_location div {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Inputs & Select */
+input,
+select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button */
+.submit {
+  width: 400px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.submitallocate {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #3b3758;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submitallocate:hover {
+  background-color: #0056b3;
+}

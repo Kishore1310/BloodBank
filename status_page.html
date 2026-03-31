@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Status Page</title>
+  <link rel="stylesheet" href="/status_page.css">
+  <script src="/statusp.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <div class="status-container">
+
+    <h2>Request Status</h2>
+     <button onclick="downloadPDF()" class="download-btn">Download PDF</button>
+    <!-- Current Request Details -->
+      <div id="cardContainer" class="card-container"></div>
+    
+  </div>
+
+</body>
+</html>

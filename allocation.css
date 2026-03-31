@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #eef2f7;
+  padding: 20px;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  color: #c0392b;
+  margin-bottom: 10px;
+}
+
+/* Welcome */
+/* Welcome Container */
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  /* background: #ffffff; */
+  border-radius: 12px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  /* box-shadow: 0 4px 10px rgba(0,0,0,0.1); */
+}
+
+/* "Welcome" text */
+.welcome1_status {
+  font-size: 20px;
+  color: #555;
+  text-transform: capitalize;
+}
+
+/* Name styling */
+.welcome_hospital_name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #c0392b;
+  text-transform: capitalize;
+}
+
+.welcome_hospital_name {
+  font-size: 20px;
+  font-weight: bold;
+}
+/* Main Layout */
+.main_container {
+  display: flex;
+  gap: 20px;
+}
+
+/* LEFT SIDE */
+.table1 {
+  width: 75%;
+}
+
+/* RIGHT SIDE FORM */
+form {
+  width: 25%;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* CARD GRID */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-left: 5px solid #c0392b;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* TEXT */
+.card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* STATUS */
+.status.accept {
+  color: green;
+  font-weight: bold;
+}
+
+.status.reject {
+  color: red;
+  font-weight: bold;
+}
+
+.status.pending {
+  color: orange;
+  font-weight: bold;
+}
+
+/* URGENCY */
+.urgent {
+  color: red;
+  font-weight: bold;
+}
+
+/* FORM INPUTS */
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* BUTTON */
+.submitallocate {
+  width: 100%;
+  padding: 10px;
+  background: #c0392b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

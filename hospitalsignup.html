@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital_signup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet">
+      <link rel="stylesheet" href="/hospitalsignup.css"> 
+  <script type="text/javascript" src="/hospitalvalidation.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Signup</h1>
+    <p id="error-message"></p>
+    <form  action="/hospitalsignup" id="form" method="post" >
+      <div>
+        <label for="hospitalname-input">
+          <span class="material-symbols-outlined">
+person
+</span>
+        </label>
+      
+      
+        <input type="text" name="name" id="hospitalname-input" placeholder="Hospitalname"> 
+      </div>
+      <div>
+        <label for="hospitalid-input">
+          <span class="material-symbols-outlined">
+person
+</span>
+        </label>
+      
+      
+        <input type="text" name="hospitalid" id="hospitalid-input" placeholder="Hospitalid"> 
+      </div>
+      <div>
+        <label for="email-input">
+          <span class="material-symbols-outlined">
+alternate_email
+</span>
+        </label>
+      
+       
+          <input type="email" name="email"id="email-input" placeholder="Email">
+        </div>
+        <div>
+          <label for="password-input">
+            <span class="material-symbols-outlined">
+lock
+</span>
+          </label>
+       
+          <input type="password" name="password" id="password-input" placeholder="password">
+        </div>
+        <div>
+          <label for="password-input">
+            <span class="material-symbols-outlined">
+lock
+</span>
+          </label>
+       
+          <input type="password" name="repeat-password" id="repeat-password-input" placeholder="repeat password">
+        </div>
+        <div>
+          <label for="location-input">
+            <span class="material-symbols-outlined">
+lock
+</span>
+          </label>
+       
+          <input type="text" name="location" id="location-input" placeholder="Location">
+        </div>
+        <div>
+          <label for="contact-input">
+            <span class="material-symbols-outlined">
+lock
+</span>
+          </label>
+       
+          <input type="text" name="contact" id="contact-input" placeholder="ContactNumber">
+        </div>
+        <div>
+          <label for="license-input">
+            <span class="material-symbols-outlined">
+lock
+</span>
+          </label>
+       
+          <input type="text" name="licence" id="license-input" placeholder="LicenseNumber">
+        </div>
+        <div class="box-1">
+        <div class="fonts">Select Hospital Type</div>
+        <br>
+         <div class="locate">
+        <label for="hospital_government">Government</label>
+        <input type="radio" name="hospital_type" id="hospital_government"value="Government">
+        <label for="hospital_private">Private</label>
+        <input type="radio" name="hospital_type" id="hospital_private"value="Private">
+        <label for="hospital_trauma_center">Trauma-Center</label>
+        <input type="radio" name="hospital_type" id="hospital_trauma_center"value="Trauma_center">
+        <label for="hospital_small_clinic">Small-Clinic</label>
+        <input type="radio" name="hospital_type" id="hospital_small_clinic"value="Small_clinic">
+        </div>
+        </div>
+        <button type="submit">Signup</button>
+    </form>
+    <p>Already have an account? <a href="/hospitallogin.html">login</a></p>
+
+  </div>
+</body>
+</html>

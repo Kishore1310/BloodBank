@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coordinator Dashboard</title>
+
+  
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #c0392b;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.logo {
+  font-size: 22px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+body {
+  background: linear-gradient(135deg, #eef2f7, #dfe9f3);
+  padding: 30px;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #c0392b;
+}
+
+/* Grid */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  border-left: 6px solid #c0392b;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: #fdf2f2;
+}
+
+/* Numbers */
+.card h2 {
+  font-size: 40px;
+  color: #c0392b;
+}
+
+/* Text */
+.card p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+  </style>
+ 
+</head>
+<body>
+
+  <h1 class="title">Coordinator Dashboard</h1>
+
+  <!-- Navbar -->
+<div class="navbar">
+  <h2 class="logo">Blood Bank</h2>
+  <div class="nav-links">
+    <a href="/allocation_page.html">Allocation</a>
+    <a href="/coordinator_page.html">Dispatch</a>
+   
+  </div>
+</div>
+  <div class="dashboard">
+
+    <div class="card" onclick="goToAllocation()">
+      <h2 id="totalUnits">0</h2>
+      <p>Total Units to Allocate</p>
+    </div>
+
+    <div class="card" onclick="goToAllocation()">
+      <h2 id="accepted">0</h2>
+      <p>Accepted Requests</p>
+    </div>
+
+    <div class="card" onclick="goToAllocation()">
+      <h2 id="rejected">0</h2>
+      <p>Rejected Requests</p>
+    </div>
+
+    <div class="card" onclick="goToTransfer()">
+      <h2 id="inTransit">0</h2>
+      <p>Units In Transit</p>
+    </div>
+
+    <div class="card" onclick="goToTransfer()">
+      <h2 id="delivered">0</h2>
+      <p>Units Delivered</p>
+    </div>
+
+  </div>
+<script>
+  
+// 🔀 Navigation
+console.log("JS Loaded");
+function goToAllocation() {
+  window.location.href = "/allocation.html";
+}
+
+function goToTransfer() {
+  window.location.href = "/coordinator.html";
+}
+
+async function loadDashboard() {
+  try {
+    const response = await fetch("http://localhost:3000/index/dashboard1");
+
+    const text = await response.text();   // get raw response first
+    console.log(text);
+
+    const data = JSON.parse(text);        // parse manually
+
+    document.getElementById("totalUnits").innerText = data.totalavailable[0].total;
+    document.getElementById("accepted").innerText = data.totalaccepted[0].total;
+    document.getElementById("rejected").innerText = data.totalrejected[0].total;
+    document.getElementById("inTransit").innerText = data.totalintransit[0].total;
+    document.getElementById("delivered").innerText = data.totaldelivered[0].total;
+
+  } catch (error) {
+    console.log("Error loading dashboard:", error);
+  }
+}
+
+// Call function
+loadDashboard();
+</script>
+</body>
+</html>

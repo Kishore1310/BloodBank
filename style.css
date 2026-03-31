@@ -1,0 +1,113 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+/* Body */
+body {
+  height: 100vh;
+  background:linear-gradient(167deg, #fff, #9198ff);;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Card */
+.wrapper {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Title */
+.wrapper h1 {
+  margin-bottom: 20px;
+  color: #c0392b;
+}
+
+/* Input Container */
+form div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  background: #f3f3f3;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* Icons */
+form span {
+  color: #c0392b;
+  margin-right: 8px;
+}
+
+/* Inputs */
+form input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Role Dropdown */
+.select_role {
+  margin-bottom: 15px;
+}
+
+.select_role select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #f3f3f3;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #c0392b;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #8e0000;
+}
+
+/* Footer Text */
+.wrapper p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* Link */
+.wrapper a {
+  color: #c0392b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.wrapper a:hover {
+  text-decoration: underline;
+}
+
+/* Error Message */
+#error-message {
+  color: red;
+  font-size: 13px;
+  margin-bottom: 10px;
+}

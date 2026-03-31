@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/blood_unit_page.css">
+  <title>Document</title>
+  <script type="text/javascript" src="/donorunit.js" defer></script>
+</head>
+<body>
+  <div class="blood_unit_page">
+    <div class="blood_unitpage">Blood Unit Page</div>
+     <p id="error-message"></p>
+  </div><form action="/blood_unit_page" method="post" id="form">
+  <div class="maincontainer">
+    <div class="container1">
+      <div class="id1">enter id</div>
+      <input type="text" placeholder="Enter ID" id="userid_input" name="donor_id">
+    </div>
+     <div class="container1">
+      <div class="id1">storage location</div>
+      <input type="text" placeholder="Enter location" id="location-input" name="storage_location">
+    </div>
+     <div class="container2">
+        <div class="allocating_unit_type">
+          <label for="bloodGroup1">Blood Group:</label>
+<select id="bloodGroup1" name="blood_group" required>
+  <option value="">-- Select Blood Group --</option>
+  <option value="A+">A+</option>
+  <option value="A-">A-</option>
+  <option value="B+">B+</option>
+  <option value="B-">B-</option>
+  <option value="O+">O+</option>
+  <option value="O-">O-</option>
+  <option value="AB+">AB+</option>
+  <option value="AB-">AB-</option>
+</select>
+        </div>
+       
+      </div>
+       <div class="container2">
+        <div class="allocating_unit_type">
+          <label for="bloodGroup2">status:</label>
+<select id="bloodGroup2" name="status" required>
+  <option value="">-- Select status--</option>
+  <option value="Available">Available</option>
+  <option value="Expired">Expired</option>
+</select>
+        </div>
+       
+      </div>
+      <div class="container3">
+         <div class="time">
+ <label for="requiredDate">Donation Date:</label>
+<input type="date" id="donation_Date" name="collection_date">
+</div>
+         <div class="time">
+ <label for="requiredDate">Expiry date:</label>
+<input type="date" id="requiredDate" name="expiry_date">
+</div>
+      </div>
+
+  </div>
+<div class="submit">
+        <button class="submitallocate">submit</button>
+      </div>
+      </form>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donor Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet">
+  <link rel="stylesheet" href="/donor_registration.css">
+  <script type="text/javascript" src="/donor_detail.js" defer></script>
+  
+</head>
+<body>
+  <h1> donor registration  page</h1>
+         <p id="error-message"></p>
+  <form action="/donor_registration" method="post" id="form">
+   <div class="person_ki">
+     <div class="person_ki_name">Donor Name:</div>
+        <input type="text" name="name" id="firstname-input" placeholder="Donorname"> 
+      </div>
+  <div class="allocating_unit">
+        <div class="allocating_unit_type">
+          <label for="bloodGroup">Blood Group:</label>
+<select id="bloodGroup" name="blood_group" required>
+  <option value="">-- Select Blood Group --</option>
+  <option value="A+">A+</option>
+  <option value="A-">A-</option>
+  <option value="B+">B+</option>
+  <option value="B-">B-</option>
+  <option value="O+">O+</option>
+  <option value="O-">O-</option>
+  <option value="AB+">AB+</option>
+  <option value="AB-">AB-</option>
+</select>
+        </div>
+      </div>
+       <div class="person_ki_location">
+     <div class="person_ki_name">Donation Location:</div>
+        <input type="text" name="donation_location" id="donation_location-input" placeholder="Enter location"> 
+      </div>
+<div class="person_ki_location">
+     <div class="person_ki_location_label">Donor contact:</div>
+        <input type="text" name="contact" id="contact-input" placeholder="Enter contact"> 
+      </div>
+          <div class="submit">
+        <button class="submitallocate">submit</button>
+      </div>
+      </form>
+
+</body>
+</html>

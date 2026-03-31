@@ -1,0 +1,149 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding:0px;
+  font-family: cursive;
+}
+
+html{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 15pt;
+  text-align: center;
+}
+
+.wrapper{
+  min-height:100vh;
+  padding-top:20px;
+  display: flex;
+  margin-top:40px;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  text-align: center;
+  font-weight: 400;
+  padding:5px 0px;
+}
+
+form{
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+  padding:10px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:15px;
+}
+
+/* Input rows */
+form >div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+/* KEEPING YOUR LABEL STYLE */
+form label{
+  flex-shrink: 0;
+  width: 50px;
+  height:50px;
+  background-color: #8b00ffa8; /* your original color */
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.material-symbols-outlined{
+  line-height: normal;
+}
+
+/* Inputs */
+form input{
+  border:none;
+  width: 100%;
+  height:50px;
+  padding:10px;
+  background-color: #cbcced;
+  outline: none;
+}
+
+form input:hover{
+  border:2px solid blueviolet;
+}
+
+/* -------- RADIO SECTION (FIXED BUT SIMPLE) -------- */
+/* -------- RADIO SECTION (HORIZONTAL) -------- */
+form > div:last-of-type{
+  /* flex-direction: row;          horizontal */
+  /* align-items: center; */
+  justify-content: center;
+  flex-wrap: wrap;              /* wrap if screen is small */
+  gap: 7px;
+  width: 100%;
+}
+
+/* Radio labels */
+form > div:last-of-type label{
+  width: auto;
+  height: auto;
+  background: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;              /* smaller text */
+  cursor: pointer;
+}
+
+/* Radio input */
+form > div:last-of-type input[type="radio"]{
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+/* Button */
+form button{
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  background-color:#545f78;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+form button:hover{
+  background-color:#3f475c;
+}
+
+/* Links */
+.wrapper p a{
+  text-decoration: none;
+}
+
+/* Error styles */
+form div.incorrect label{
+  background-color: red;
+}
+
+form div.incorrect input{
+  background-color: #ffcccc;
+}
+.box-1{
+  display: flex;
+  flex-direction: column;
+}
+.locate{
+  display: flex;
+  gap:10px;
+
+}
+.fonts{
+  font-size: 15px;
+ 
+}

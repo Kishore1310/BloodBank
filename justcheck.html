@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #b30000, #ff4d4d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: white;
+  padding: 30px;
+  width: 320px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+h2 {
+  color: #b30000;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  background: #f2f2f2;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.input-box span {
+  margin-right: 10px;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+}
+
+.toggle {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background: #b30000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #800000;
+}
+
+.link {
+  margin-top: 15px;
+}
+
+#errorMsg {
+  color: red;
+  font-size: 14px;
+}
+.input-box select {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+}</style>
+</head>
+<body>
+
+<div class="login-container">
+
+  <h2>Login</h2>
+
+  <form id="loginForm">
+
+    <div class="input-box">
+      <span>📧</span>
+      <input type="email" id="email" placeholder="Enter Email" required>
+    </div>
+    <div class="input-box">
+  <span>👤</span>
+  <select id="role" required>
+    <option value="">-- Select Role --</option>
+    <option value="admin">Admin</option>
+    <option value="hospital">Hospital Staff</option>
+    <option value="coordinator">Coordinator</option>
+    <option value="auditor">Auditor</option>
+  </select>
+</div>
+
+    <!-- ❌ Remove role dropdown -->
+    
+    <div class="input-box">
+      <span>🔒</span>
+      <input type="password" id="password" placeholder="Enter Password" required>
+      <button type="button" class="toggle" onclick="togglePassword()">👁</button>
+    </div>
+
+    <button type="submit" class="login-btn">Login</button>
+
+    <p id="errorMsg"></p>
+
+    <p class="link">
+      New Here? <a href="/signup.html">Create Account</a>
+    </p>
+
+  </form>
+
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>

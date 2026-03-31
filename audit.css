@@ -1,0 +1,155 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+/* Body */
+body {
+  background: linear-gradient(135deg, #eef2f7, #dfe9f3);
+  min-height: 100vh;
+}
+
+/* Top Header */
+.inventory {
+width: 100%;
+  padding: 18px;
+  /* background: #253dc1; */
+  color: #5e10bc;
+  text-align: center;
+  font-size: 33px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Table Wrapper */
+.table1 {
+  width: 90%;
+  margin: 30px auto;
+}
+
+/* Scrollable container */
+.table-container {
+  max-height: 704px;
+  overflow-y: auto;
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #3111cb; 
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+
+.box-1 {
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.box-1 a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.box-1:hover {
+  background-color: white;
+}
+
+.box-1:hover a {
+  color: #b30000;
+}
+
+
+
+/* Scrollbar */
+.table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 10px;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+/* Header */
+.table thead {
+  background: #4c2bc0;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+.donors,.blood_unit{
+  text-align: center;
+  font-size: 34px;
+  /* background: blue; */
+  margin-bottom: 20px;
+  color: #5e10bc;
+  font-weight: bold;
+}
+.table th {
+  padding: 14px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+/* Table Data */
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Row Hover */
+.table tbody tr:hover {
+  background: #f8f9fa;
+  transition: 0.2s;
+}
+
+/* Status Colors */
+.status-approved {
+  color: green;
+  font-weight: bold;
+}
+
+.status-rejected {
+  color: red;
+  font-weight: bold;
+}
+
+.status-pending {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .table1 {
+    width: 95%;
+  }
+
+  .table th, .table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+}

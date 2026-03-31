@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coordinator</title>
+
+  <link rel="stylesheet" href="/coordinator.css">
+  <script src="/coordination.js" defer></script>
+</head>
+
+<body>
+
+  <h1 class="title">ALLOCATION PAGE</h1>
+
+  <div class="welcome">
+    <span>Welcome</span>
+    <span class="welcome_hospital_name">Coordinator</span>
+  </div>  <p id="error-message"></p>
+
+  <div class="main_container">
+
+    <!-- LEFT SIDE (CARDS) -->
+    <div class="left_side">
+      <div id="cardContainer" class="card-container"></div>
+    </div>
+
+    <!-- RIGHT SIDE (FORM) -->
+    <div class="right_side">
+        <p id="error-message"></p>
+      <form id="form" action="/coordinator" method="post">
+
+        <label>Request id</label>
+        <input type="text" id="firrequest-input" placeholder="Enter Request id" name="request_id">
+
+        <label>Unit id</label>
+        <div id="firstunit-input" class="card-container1"></div>
+
+        
+          <label for="status">status</label>
+<select id="status11-input" name="status" required>
+  <option value="Pending">Pending</option>
+  <option value="In transit">IN transit</option>
+  <option value="Delivered">Delivered</option>
+  
+  
+</select>
+       
+       
+
+        <label>Hospital name</label>
+        <input type="text" name="hospitalname" id="hospitalname-input" placeholder="Hospital name">
+
+        <label>Hospital location</label>
+        <input type="text" id="hospitallocation-input" placeholder="Hospital location" name="hospitallocation">
+
+        <label id="changedate">Dispatch date</label>
+        <input type="date" id="DispatchDate" name="dispatchdate">
+
+        <button type="submit" class="btn"id="btnbtn">IN TRANSIT</button>
+
+       
+
+      </form>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

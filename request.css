@@ -1,0 +1,147 @@
+/* Reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Body */
+body{
+  background: linear-gradient(135deg, #eef2f7, #dfe9f3);
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #523aff;
+  padding: 15px 40px;
+  color: white;
+}
+
+.navbar .box-1 a{
+  color: white;
+  margin-left: 20px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.navbar .box-1 a:hover{
+  text-decoration: underline;
+}
+
+/* Heading */
+.heading{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.request_page{
+  font-size: 36px;
+  font-weight: bold;
+  color: #c0392b;
+}
+
+/* Welcome Section */
+.welcome{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 20px 0;
+  font-size: 18px;
+}
+
+.welcome_hospital_name{
+  font-weight: bold;
+  color: #2e86de;
+}
+
+/* Form Container */
+.formdetail{
+  width: 420px;
+  margin: auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Error Message */
+#error-message{
+  text-align: center;
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Inputs */
+form div{
+  margin-bottom: 15px;
+}
+
+input, select, textarea{
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Focus effect */
+input:focus, select:focus, textarea:focus{
+  border-color: #c0392b;
+  box-shadow: 0 0 5px rgba(192,57,43,0.3);
+}
+
+/* Labels */
+label{
+  font-size: 13px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Required Unit */
+.required_unit1{
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+/* Button */
+button{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #c0392b;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover{
+  background: #922b21;
+}
+a{
+  text-decoration: none;
+  /* background-color: white;
+  outline-color: black; */
+}
+/* Readonly Fields */
+input[readonly]{
+  background: #f1f1f1;
+  color: #555;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media(max-width: 500px){
+  .formdetail{
+    width: 90%;
+  }
+}

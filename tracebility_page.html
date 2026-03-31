@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Traceability Dashboard</title>
+  <link rel="stylesheet" href="/tracebility.css">
+</head>
+<body>
+
+<h1>Traceability Dashboard</h1>
+
+
+<form id="form">
+  <input type="text" id="user_name" placeholder="Enter Username">
+  <input type="text" id="user_id" placeholder="Enter User ID">
+  <button type="submit">Submit</button>
+</form>
+<div class="submit"> <button onclick="downloadPDF()" class="download-btn">Download PDF</button> </div>
+   
+<div class="user_details">
+
+  <div>User Name: <span id="username_box"></span></div>
+  <div>User ID: <span id="userid_box"></span></div>
+  <div>Donation Location: <span id="donation_box"></span></div>
+ <div>Donation Date : <span id="donationl_box"></span></div>
+  <div>Blood Group: <span id="bloodgroup_box"></span></div>
+  <div>Unit ID: <span id="unitid_box"></span></div>
+  <div>Storage Location: <span id="storage_box"></span></div>
+  <div>Expiry Date: <span id="expiry_box"></span></div>
+  <div>Status: <span id="status_box"></span></div>
+
+  <div>Allocation ID: <span id="allocationid_box"></span></div>
+  <div>Allocation Date: <span id="allocationdate_box"></span></div>
+  <div>Allocated By: <span id="allocatedby_box"></span></div>
+  <div>Allocation Status: <span id="allocationstatus_box"></span></div>
+
+  <div>Hospital Name: <span id="hospital_box"></span></div>
+  <div>Hospital Location: <span id="hospital_location_box"></span></div>
+   <div>Hospital ID: <span id="hospital_id_box"></span></div>
+
+  <div>Transfer ID: <span id="transferid_box"></span></div>
+  <div>Transfer Status: <span id="transferstatus_box"></span></div>
+
+  <div>Dispatch Date: <span id="dispatch_box"></span></div>
+  <div>Delivered Date: <span id="delivered_box"></span></div>
+
+</div>
+
+<script src="/tracebility.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>
+
