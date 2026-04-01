@@ -2,9 +2,8 @@
 #include <vector>
 using namespace std;
 
-class Course; // Forward declaration
+class Course;
 
-// -------------------- Student Class --------------------
 class Student
 {
 public:
@@ -21,7 +20,6 @@ public:
   void enrollCourse(Course *course);
 };
 
-// -------------------- Course Class --------------------
 class Course
 {
 public:
