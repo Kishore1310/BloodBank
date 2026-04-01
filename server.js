@@ -6,6 +6,7 @@ const app = express()
 const bcrypt = require("bcrypt")
 const cors = require("cors")
 const e = require("express")
+require("dotenv").config();
 
 app.use(express.static("public"));
 
@@ -1227,7 +1228,7 @@ app.get("/index/audit1",(req,res)=>{
 
 
 //run server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);
