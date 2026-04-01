@@ -17,63 +17,63 @@ app.use(session({
   saveUninitialized: true
 }));
 app.get("/index/tracebility",(req,res)=>{
-  res.sendFile(path.join(__dirname,"tracebility_page.html"))
+  res.sendFile(path.join(__dirname,"./tracebility_page.html"))
 })
 app.use(express.static(__dirname))
 app.get('/index', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'))
 });
 app.get('/index/login', (req, res) => {
-  res.sendFile(path.join(__dirname, 'login.html'))
+  res.sendFile(path.join(__dirname, './login.html'))
 });
 app.get('/index/signup', (req, res) => {
-  res.sendFile(path.join(__dirname, 'signup.html'))
+  res.sendFile(path.join(__dirname, './signup.html'))
 });
 app.get("/index/hospitalsignup", (req, res) => {
-  res.sendFile(path.join(__dirname, "hospitalsignup.html"))
+  res.sendFile(path.join(__dirname, "./hospitalsignup.html"))
 })
 app.get("/index/hospitalsignup", (req, res) => {
-  res.sendFile(path.join(__dirname, 'hospitalsignup.html'))
+  res.sendFile(path.join(__dirname, './hospitalsignup.html'))
 })
 app.get("/index/history", (req, res) => {
-  res.sendFile(path.join(__dirname, 'history.html'))
+  res.sendFile(path.join(__dirname, './history.html'))
 })
 app.get("/index/inventory", (req, res) => {
   if (!req.session.user || req.session.user.role !== "Admin") {
     return res.send("Access denied");
   }
-  res.sendFile(path.join(__dirname, 'inventory.html'))
+  res.sendFile(path.join(__dirname, './inventory.html'))
 })
 app.get("/index/donor_registration", (req, res) => {
-  res.sendFile(path.join(__dirname, 'donor_registration.html'))
+  res.sendFile(path.join(__dirname, './donor_registration.html'))
 })
 app.get("/index/blood_unit_page", (req, res) => {
 
-  res.sendFile(path.join(__dirname, 'blood_unit_page.html'))
+  res.sendFile(path.join(__dirname, './blood_unit_page.html'))
 })
 app.get("/index/coordinator",(req,res)=>{
-  res.sendFile(path.join(__dirname, 'coordinator_page.html'))
+  res.sendFile(path.join(__dirname, './coordinator_page.html'))
 })
 app.get("/index/coordinator", (req, res) => {
   if (!req.session.user || req.session.user.role !== "Coordinator") {
     return res.send("Access denied");
   }
-  res.sendFile(path.join(__dirname, 'coordinator_page.html'))
+  res.sendFile(path.join(__dirname, './coordinator_page.html'))
 })
 app.get("/index/auditor", (req, res) => {
   if (!req.session.user || req.session.user.role !== "Auditor") {
     return res.send("Access denied");
   }
-  res.sendFile(path.join(__dirname, 'audit.html'))
+  res.sendFile(path.join(__dirname, './audit.html'))
 })
 app.get("/index/request", (req, res) => {
   if (!req.session.user || req.session.user.role !== "Hospital stuff") {
     return res.send("Access denied");
   }
-  res.sendFile(path.join(__dirname, 'request.html'))
+  res.sendFile(path.join(__dirname, './request.html'))
 })
 app.get("/index/allocation_page", (req, res) => {
-  res.sendFile(path.join(__dirname, 'allocation_page.html'))
+  res.sendFile(path.join(__dirname, './allocation_page.html'))
 })
 //  app.get("/index/dashboard", (req, res) => {
 //   res.sendFile(path.join(__dirname, 'dashboard.html'))
@@ -82,7 +82,7 @@ app.get("/index/allocation_page", (req, res) => {
   if (!req.session.user || req.session.user.role !== "Coordinator") {
     return res.send("Access denied");
   }
-  res.sendFile(path.join(__dirname, 'dashboard.html'))
+  res.sendFile(path.join(__dirname, './dashboard.html'))
 })
 // app.get("/tracebility",(req,res)=>{
 //    res.sendFile(path.join(__dirname,"tracebility_page.html"))
